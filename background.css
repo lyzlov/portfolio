@@ -1,0 +1,17 @@
+@keyframes onLoad {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  animation: onLoad 2s ease-out;
+  z-index: -2;
+  background-image: linear-gradient(rgba(44, 64, 83, 0.2941176471), rgba(0, 0, 0, 0)), url("images/bg-mob.jpg");
+}/*# sourceMappingURL=background.css.map */

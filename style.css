@@ -1,0 +1,44 @@
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.margin-top {
+  margin-top: 60px;
+}
+
+.white {
+  color: white;
+}
+
+.transparent {
+  opacity: 0.7;
+}/*# sourceMappingURL=style.css.map */

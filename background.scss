@@ -1,0 +1,28 @@
+@import 'media.scss';
+
+// -
+@keyframes onLoad {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+};
+
+// -
+$background-image: url("images/bg-mob.jpg");
+$background-gradient: linear-gradient(#2c40534b,#00000000);
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  animation: onLoad 2s ease-out;
+  z-index: -2;
+  background-image: $background-gradient, $background-image;
+}
+@media only screen and (min-width: $media-m) {
+  $background-image: url("images/bg.jpg");
+};

@@ -1,0 +1,184 @@
+@import 'media.scss';
+
+.space {
+  margin-top: 60px;
+}
+.top {
+  top: 0px;
+}
+
+.menu {
+  position: sticky;
+  top:0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  grid-column: 1 / 7;
+}
+@media only screen and (min-width: $media-s) {
+  .menu {
+    grid-column: 1 / 13;
+  }
+};
+.svg-menu-divider {
+  height:60px;
+  width:60px;
+}
+
+.hover-change {
+  display: flex;
+  align-items: center;
+  height:60px;
+  width:200px;
+}
+.hover-mark {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height:60px;
+  width:200px;
+}
+
+#portfolio .hover-change::after {
+  content: "Портфолио";
+}
+#portfolio .hover-change:hover::after {
+  content: "Работа";
+}
+#work .hover-change::after {
+  content: "Работа";
+}
+#work .hover-change:hover::after {
+  content: "Портфолио";
+}
+
+.hover-mark:hover {
+  font-weight: 400;
+}
+
+// -
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  z-index: -1;
+}
+@media only screen and (min-width: $media-s) {
+  .title {
+    justify-content: flex-start;
+    grid-column: 1 / 13;
+  }
+}
+
+// -
+.svg-block {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.svg-options {
+  stroke: white;
+  stroke-width: 0.5;
+  fill-opacity: 0%;
+  
+}
+.svg-link:hover {
+  stroke-width: 1;
+  z-index: -2;
+}
+.svg-divider {
+  height: 120px;
+}
+.svg-grid-position {
+  grid-column: 2 / 6;
+}
+@media only screen and (min-width: $media-mob) {
+  .svg-grid-position {
+    grid-column: 3 / 5;
+  }
+}
+@media only screen and (min-width: $media-s) {
+  .svg-grid-position {
+    grid-column: 5 / 9;
+  }
+};
+
+// -
+section {
+  position: relative;
+  min-height: 100vh;
+}
+
+.blocks-grid {
+  grid-row: 2 / 3;
+  grid-column: 1 / 7;
+}
+@media only screen and (min-width: $media-s) {
+  .blocks-grid {
+    grid-column: 1 / 13;
+  }
+}
+
+.block {
+  grid-column: span 6;
+  aspect-ratio: 1 / 1;
+  padding: 10px;
+  overflow: hidden;
+  border: 0.5px solid rgba(255, 255, 255, 0.7);
+}
+@media only screen and (min-width: $media-mob) {
+  .block {
+    grid-column: span 3;
+  }
+}
+@media only screen and (min-width: $media-xs) {
+  .block {
+    grid-column: span 2;
+  }
+}
+@media only screen and (min-width: $media-s) {
+  .block {
+    grid-column: span 3;
+  }
+}
+
+
+.block:hover {
+  background-size: cover;
+  content-visibility: hidden;
+}
+.c1:hover {
+  background-image: url("images/c1.png");
+}
+.c2:hover {
+  background-image: url("images/c2.png");
+}
+.c3:hover {
+  background-image: url("images/c3.png");
+}
+.c4:hover {
+  background-image: url("images/c4.png");
+}
+.c5:hover {
+  background-image: url("images/c5.png");
+}
+
+
+.w {
+  grid-column: span 6;
+  background-color: white;
+  padding: 30px;
+}
+@media only screen and (min-width: $media-mob) {
+  .w {
+    grid-column: span 12;
+  }
+}
+@media only screen and (min-width: $media-s) {
+  .w {
+    grid-column: span 4;
+    height: 100%;
+  }
+}

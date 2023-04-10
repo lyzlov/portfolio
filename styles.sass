@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&family=Source+Serif+Pro')
+
+// Animation - Position - Media 
+@keyframes onLoad
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+// -
+.fixed
+    position: fixed
+.absolute
+    position: absolute
+.relative
+    position: relative
+
+.grid
+    display: grid
+.flex
+    display: flex
+
+.full-height
+    height: 100vh
+.full-width
+    width: 100%
+// -
+$media-mob: 400px
+$media-s: 860px
+$media-m: 1380px
+$media-l: 1920px
+
+// Grid-column 
+@mixin mob-6-cols 
+    grid-template-columns: repeat(6, 1fr)
+    gap: 10px
+    margin: 0 20px
+@mixin s-12-cols 
+    grid-template-columns: repeat(12, 50px)
+    gap: 20px
+    margin: 0
+@mixin m-12-cols 
+    grid-template-columns: repeat(12, 80px)
+    gap: 20px
+    margin: 0
+@mixin l-12-cols 
+    grid-template-columns: repeat(12, 120px)
+    gap: 30px
+    margin: 0
+
+.grid-column
+    display: grid
+    justify-content: center
+    @include mob-6-cols
+
+@media only screen and (min-width: $media-s)
+    .grid-column
+        @include s-12-cols  
+@media only screen and (min-width: $media-m)
+    .grid-column
+        @include m-12-cols 
+@media only screen and (min-width: $media-l)
+    .grid-column
+        @include l-12-cols     
+
+// Color - Background - Svg
+.white
+    color: white
+.transparent
+    opacity: 0.7
+// -
+$background-image: url("images/bg-mob.jpg")
+$background-gradient: linear-gradient(#2c40534b,#00000000)
+
+.background
+    width: 100vw
+    height: 100vh
+    background-position: center
+    background-size: cover
+    animation: onLoad 2s ease-out
+    z-index: -2
+    background-image: $background-gradient, $background-image
+
+@media only screen and (min-width: $media-m)
+    $background-image: url("images/bg.jpg")
+// -
+.svg-block
+    display: flex
+    align-items: center 
+    overflow: hidden
+
+.svg-grid-position  
+    grid-column: 2 / 6
+@media only screen and (min-width: $media-mob)
+    .svg-grid-position
+        grid-column: 3 / 5
+@media only screen and (min-width: $media-s)
+    .svg-grid-position
+        grid-column: 5 / 9
+
+.svg-options
+    stroke: white
+    stroke-width: 0.5
+    fill-opacity: 0%
+    width: 100%
+.svg-options:hover
+    stroke-width: 1
+
+// Fonts
+.oswald
+    font-family: Oswald 
+.source-serif 
+    font-family: Source+Serif+Pro
+
+.light
+    font-weight: 200
+.regular
+    font-weight: 400
+.semibold
+    font-weight: 500
+.bold
+    font-weight: 600
+.letter-spacing
+    letter-spacing: 0.2em
+
+@mixin h1-l
+    font-size: 10rem
+    line-height: 10rem
+@mixin h1-m
+    font-size: 7rem
+    line-height: 7rem
+@mixin h1-s
+    font-size: 5rem
+    line-height: 5rem
+
+@mixin h2-l
+    font-size: 1.75rem
+    line-height: 2.5rem
+@mixin h2-m
+    font-size: 1.25rem
+    line-height: 2rem
+
+@mixin h3-l
+    font-size: 1.25rem
+    line-height: 2rem
+@mixin h3-m
+    font-size: 1rem
+    line-height: 1.6rem
+
+@mixin nav-l
+    font-size: 2.5rem
+    line-height: 3.75rem  
+@mixin nav-m
+    font-size: 1.25rem
+    line-height: 2rem  
+
+@mixin p-l
+    font-size: 1.5rem
+    line-height: 2rem  
+@mixin p-m
+    font-size: 1rem
+    line-height: 1.6rem
+
+h1
+    @include h1-s
+h2
+    @include h2-m  
+h3
+    @include h3-m  
+a
+    @include nav-m  
+p
+    @include p-m  
+
+@media only screen and (min-width: $media-m)
+    h1 
+        @include h1-m
+@media only screen and (min-width: $media-l)
+    h1
+        @include h1-l  
+    h2
+        @include h2-l  
+    h3
+        @include h3-l  
+    a
+        @include nav-l  
+    p
+        @include p-l
+
+// Blocks
+.title
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100%
+    width: 100%
+    z-index: -1
+@media only screen and (min-width: $media-s)
+    .title
+        justify-content: flex-start
+        grid-column: 1 / 13
+.menu  
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    height: 60px
+    grid-column:  1 / 7  
+@media only screen and (min-width: $media-s)
+    .menu
+       grid-column: 1 / 13
+
+// nav
+//     width: 100%  
+
+.blocks-grid-position 
+    grid-row: 2 / 3
+    grid-column:  1 / 7  
+@media only screen and (min-width: $media-s)
+    .blocks-grid-position 
+       grid-column: 1 / 13
+.block
+    grid-column: span 3
+    aspect-ratio: 1 / 1
+    padding: 10px
+    border: 0.5px solid rgba(255, 255, 255, 0.7)
+// .block:hover   
+//     border: 2px solid rgba(255, 255, 255, 0.7) 
+
+.hover-hide:hover
+    opacity: 0
+.hover-mark:hover
+    font-weight: 400
+
+.c1:hover
+    background-image: url("images/c1.png")
+    background-size: cover
+    opacity: 1
+
+
+
+.margin-top
+    margin-top: 60px

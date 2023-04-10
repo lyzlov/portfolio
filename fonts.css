@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&family=Open+Sans:wght@400;600");
+h1 {
+  font-family: "Oswald";
+  font-weight: 600;
+}
+
+h2 {
+  font-family: "Oswald";
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  font-family: "Oswald";
+}
+
+.oswald {
+  font-family: "Oswald";
+}
+
+.source-serif {
+  font-family: "Source Serif Pro", serif;
+}
+
+.light {
+  font-weight: 200;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.semibold {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.letter-spacing-2 {
+  letter-spacing: 0.2em;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 0.1em;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+
+a {
+  color: white;
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+
+@media only screen and (min-width: 380px) {
+  h2 {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+}
+@media only screen and (min-width: 1320px) {
+  h1 {
+    font-size: 7rem;
+    line-height: 7rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  h1 {
+    font-size: 10rem;
+    line-height: 10rem;
+  }
+  h2 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+  a {
+    font-size: 2.5rem;
+    line-height: 3.75rem;
+  }
+  p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}/*# sourceMappingURL=fonts.css.map */

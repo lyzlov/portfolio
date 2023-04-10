@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&family=Open+Sans:wght@400;600');
+@import 'media.scss';
+
+h1 {
+  font-family: 'Oswald';
+  font-weight: 600;
+}
+
+h2 {
+  font-family: 'Oswald';
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+a {
+  font-family: 'Oswald';
+}
+
+
+// -
+.oswald {
+  font-family: 'Oswald';
+}
+.source-serif {
+  font-family: 'Source Serif Pro', serif;
+}
+
+.light {
+  font-weight: 200;
+}
+.regular {
+  font-weight: 400;
+}
+.semibold {
+  font-weight: 500;
+}
+.bold {
+  font-weight: 600;
+}
+.letter-spacing-2 {
+  letter-spacing: 0.2em;
+}
+.letter-spacing-1 {
+  letter-spacing: 0.1em;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+// -
+@mixin h1-s {
+  font-size: 5rem;
+  line-height: 5rem;
+}
+
+@mixin h1-m {
+  font-size: 7rem;
+  line-height: 7rem;
+}
+
+@mixin h1-l {
+  font-size: 10rem;
+  line-height: 10rem;
+}
+
+@mixin h2-s {
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+@mixin h2-m {
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+}
+
+@mixin h2-l {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+@mixin h3-m {
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+
+@mixin h3-l {
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+@mixin nav-m {
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+@mixin nav-l {
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+}
+
+@mixin p-m {
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+
+@mixin p-l {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+// -
+h1 {
+  @include h1-s;
+}
+h2 {
+  @include h2-m;
+}
+h3 {
+  @include h3-m;
+}
+a {
+  color: white;
+  @include nav-m;
+}
+p {
+  @include p-m;
+}
+@media only screen and (min-width: $media-mob) {
+  h2 {
+    @include h2-s;
+  }
+}
+
+@media only screen and (min-width: $media-m) {
+  h1 {
+    @include h1-m;
+  }
+  h2 {
+    @include h2-m;
+  }
+}
+@media only screen and (min-width: $media-l) {
+  h1 {
+    @include h1-l;
+  }
+  h2 {
+    @include h2-l;
+  }
+  h3 {
+    @include h3-l;
+  }
+  a {
+    @include nav-l;
+  }
+  p {
+    @include p-l;
+  }
+};
